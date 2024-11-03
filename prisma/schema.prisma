@@ -1,0 +1,27 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model Pickup_Point {
+  id          String   @id
+  geolocation String
+  createdAt   DateTime
+  user        User     @relation(fields: [owner_id], references: [id])
+  owner_id    String
+}
+
+model User {
+  id            String         @id
+  email         String         @unique
+  password      String
+  username      String         @unique
+  user_type     Int
+  createdAt     DateTime        
+  pickup_points Pickup_Point[]
+}
