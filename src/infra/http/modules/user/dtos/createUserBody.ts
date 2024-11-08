@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsNumber, IsString } from "class-validator";
+import { IsEmail, IsNotEmpty, IsNumber, IsString, MinLength } from "class-validator";
 
 export class CreateUserBody {
   @IsString()
@@ -8,6 +8,7 @@ export class CreateUserBody {
 
   @IsString()
   @IsNotEmpty()
+  @MinLength(6)
   password: string;
 
   @IsString()

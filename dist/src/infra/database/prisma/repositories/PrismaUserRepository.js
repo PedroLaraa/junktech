@@ -23,6 +23,16 @@ let PrismaUserRepository = class PrismaUserRepository {
             data: userRaw
         });
     }
+    async findByUsername(username) {
+        const user = await this.prisma.user.findUnique({
+            where: {
+                username
+            }
+        });
+        if (!user)
+            return null;
+        return PrismaUserMapper_1.PrismaUserMapper.toDomain(user);
+    }
 };
 exports.PrismaUserRepository = PrismaUserRepository;
 exports.PrismaUserRepository = PrismaUserRepository = __decorate([
