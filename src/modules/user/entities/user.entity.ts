@@ -1,4 +1,4 @@
-import { PickupPoint } from "src/pickup_point/entities/pickup_point.entity";
+import { PickupPoint } from "../../pickup_point/entities/pickup_point.entity";
 import { Replace } from "utils/replace";
 
 interface UserSchema {

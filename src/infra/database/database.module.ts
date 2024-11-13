@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { PrismaService } from "./prisma/prisma.service";
-import { userRepository } from "src/user/repositories/UserRepository";
+import { userRepository } from "../../modules/user/repositories/UserRepository";
 import { PrismaUserRepository } from "./prisma/repositories/PrismaUserRepository";
-import { pickupPointRepository } from "../../pickup_point/repositories/PickupPointRepository";
+import { pickupPointRepository } from "../../modules/pickup_point/repositories/PickupPointRepository";
 import { PrismaPickupPointRepository } from "./prisma/repositories/PrismaPickupPointRespository";
 
 @Module({

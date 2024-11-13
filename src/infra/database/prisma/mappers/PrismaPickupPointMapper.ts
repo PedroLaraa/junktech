@@ -1,4 +1,4 @@
-import { PickupPoint } from "../../../../pickup_point/entities/pickup_point.entity";
+import { PickupPoint } from "../../../../modules/pickup_point/entities/pickup_point.entity";
 import {Pickup_Point as PickupPointRaw} from "@prisma/client"
 
 export class PrismaPickupPointMapper {
@@ -12,4 +12,14 @@ export class PrismaPickupPointMapper {
     }
   }
 
+  static toDomain({ id, geolocation, owner_id, createdAt }: PickupPointRaw): PickupPoint {
+    return new PickupPoint(
+      {
+        geolocation,
+        owner_id,
+        createdAt
+      },
+      id
+    )
+  }
 }

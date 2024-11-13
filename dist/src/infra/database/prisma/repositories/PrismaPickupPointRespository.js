@@ -25,6 +25,10 @@ let PrismaPickupPointRepository = class PrismaPickupPointRepository {
         });
     }
     ;
+    async get() {
+        const pickupPoint = await this.prisma.pickup_Point.findMany();
+        return pickupPoint.map(PrismaPickupPointMapper_1.PrismaPickupPointMapper.toDomain);
+    }
 };
 exports.PrismaPickupPointRepository = PrismaPickupPointRepository;
 exports.PrismaPickupPointRepository = PrismaPickupPointRepository = __decorate([

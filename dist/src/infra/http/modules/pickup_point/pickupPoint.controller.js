@@ -14,12 +14,15 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PickupPointController = void 0;
 const common_1 = require("@nestjs/common");
-const createPickupPointUseCase_1 = require("../../../../pickup_point/useCases/createPickupPointUseCase/createPickupPointUseCase");
+const createPickupPointUseCase_1 = require("../../../../modules/pickup_point/useCases/createPickupPointUseCase/createPickupPointUseCase");
 const createPickupPointBody_1 = require("./dtos/createPickupPointBody");
 const pickupPointViewModule_1 = require("./pickupPointViewModule/pickupPointViewModule");
+const isPublic_1 = require("../auth/decorators/isPublic");
+const getPickupPointUseCase_1 = require("../../../../modules/pickup_point/useCases/getPickupPointUseCase/getPickupPointUseCase");
 let PickupPointController = class PickupPointController {
-    constructor(createPickupPointUseCase) {
+    constructor(createPickupPointUseCase, getPickupPointUseCas) {
         this.createPickupPointUseCase = createPickupPointUseCase;
+        this.getPickupPointUseCas = getPickupPointUseCas;
     }
     ;
     async createPickupPoint(body) {
@@ -31,6 +34,10 @@ let PickupPointController = class PickupPointController {
         return pickupPointViewModule_1.PickupPointViewModule.toHttp(pickupPoint);
     }
     ;
+    async getAllPickupPoint() {
+        const pickupPoint = await this.getPickupPointUseCas.execute();
+        return pickupPoint.map(pickupPointViewModule_1.PickupPointViewModule.toHttp);
+    }
 };
 exports.PickupPointController = PickupPointController;
 __decorate([
@@ -40,9 +47,17 @@ __decorate([
     __metadata("design:paramtypes", [createPickupPointBody_1.CreatePickupPointBody]),
     __metadata("design:returntype", Promise)
 ], PickupPointController.prototype, "createPickupPoint", null);
+__decorate([
+    (0, common_1.Get)(),
+    (0, isPublic_1.Public)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], PickupPointController.prototype, "getAllPickupPoint", null);
 exports.PickupPointController = PickupPointController = __decorate([
     (0, common_1.Controller)('pickup-point'),
-    __metadata("design:paramtypes", [createPickupPointUseCase_1.CreatePickupPointUseCase])
+    __metadata("design:paramtypes", [createPickupPointUseCase_1.CreatePickupPointUseCase,
+        getPickupPointUseCase_1.GetPickupPointUseCase])
 ], PickupPointController);
 ;
 //# sourceMappingURL=pickupPoint.controller.js.map

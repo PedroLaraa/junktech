@@ -17,11 +17,11 @@ model Pickup_Point {
 }
 
 model User {
-  id            String         @id
+  id            String         @id @unique
   email         String         @unique
   password      String
   username      String         @unique
   user_type     Int
-  createdAt     DateTime        
+  createdAt     DateTime
   pickup_points Pickup_Point[]
 }

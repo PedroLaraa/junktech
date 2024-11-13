@@ -9,4 +9,8 @@ export class PickupPointRepositoryInMemory implements pickupPointRepository {
     this.pickupPoint.push(pickupPoint);
   }
 
+  async get(): Promise<PickupPoint[]> {
+    return this.pickupPoint;
+  }
+
 }
