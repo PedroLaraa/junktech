@@ -17,12 +17,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 5.21.1
- * Query Engine version: bf0e5e8a04cada8225617067eaa03d041e2bba36
+ * Prisma Client JS version: 5.22.0
+ * Query Engine version: 605197351a3c8bdd595af2d2a9bc3025bca48ea2
  */
 Prisma.prismaVersion = {
-  client: "5.21.1",
-  engine: "bf0e5e8a04cada8225617067eaa03d041e2bba36"
+  client: "5.22.0",
+  engine: "605197351a3c8bdd595af2d2a9bc3025bca48ea2"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -122,7 +122,7 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.Pickup_PointScalarFieldEnum = {
+exports.Prisma.PickupPointScalarFieldEnum = {
   id: 'id',
   geolocation: 'geolocation',
   createdAt: 'createdAt',
@@ -150,7 +150,7 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  Pickup_Point: 'Pickup_Point',
+  PickupPoint: 'PickupPoint',
   User: 'User'
 };
 

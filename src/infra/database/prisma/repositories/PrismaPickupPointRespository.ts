@@ -11,13 +11,13 @@ export class PrismaPickupPointRepository implements pickupPointRepository {
   async create(pickupPoint: PickupPoint): Promise<void> {
     const pickupPointRaw = PrismaPickupPointMapper.toPrisma(pickupPoint);
 
-    await this.prisma.pickup_Point.create({
+    await this.prisma.pickupPoint.create({
       data: pickupPointRaw
     });
   };
 
   async get(): Promise<PickupPoint[]> {
-    const pickupPoint = await this.prisma.pickup_Point.findMany()
+    const pickupPoint = await this.prisma.pickupPoint.findMany()
 
     return pickupPoint.map(PrismaPickupPointMapper.toDomain);
   }

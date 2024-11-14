@@ -20,13 +20,13 @@ let PrismaPickupPointRepository = class PrismaPickupPointRepository {
     ;
     async create(pickupPoint) {
         const pickupPointRaw = PrismaPickupPointMapper_1.PrismaPickupPointMapper.toPrisma(pickupPoint);
-        await this.prisma.pickup_Point.create({
+        await this.prisma.pickupPoint.create({
             data: pickupPointRaw
         });
     }
     ;
     async get() {
-        const pickupPoint = await this.prisma.pickup_Point.findMany();
+        const pickupPoint = await this.prisma.pickupPoint.findMany();
         return pickupPoint.map(PrismaPickupPointMapper_1.PrismaPickupPointMapper.toDomain);
     }
 };

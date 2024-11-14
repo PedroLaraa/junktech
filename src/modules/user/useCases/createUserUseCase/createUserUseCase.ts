@@ -2,6 +2,9 @@ import { Injectable } from "@nestjs/common";
 import { hash } from "bcrypt";
 import { User } from "../../entities/user.entity";
 import { userRepository } from "../../repositories/UserRepository";
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
 
 interface CreateUserRequest {
   email: string,

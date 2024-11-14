@@ -1,5 +1,5 @@
 import { PickupPoint } from "../../../../modules/pickup_point/entities/pickup_point.entity";
-import { Pickup_Point as PickupPointRaw } from '@prisma/client';
+import { PickupPoint as PickupPointRaw } from '@prisma/client';
 
 
 export class PrismaPickupPointMapper {

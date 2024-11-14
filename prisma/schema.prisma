@@ -1,7 +1,5 @@
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["driverAdapters"]
-  output   = "./generated/client"
 }
 
 datasource db {
@@ -9,7 +7,7 @@ datasource db {
   url      = env("POSTGRES_URL")
 }
 
-model Pickup_Point {
+model PickupPoint {
   id          String   @id
   geolocation String
   createdAt   DateTime
@@ -24,5 +22,5 @@ model User {
   username      String         @unique
   user_type     Int
   createdAt     DateTime
-  pickup_points Pickup_Point[]
+  pickup_points PickupPoint[]
 }

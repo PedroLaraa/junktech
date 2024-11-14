@@ -32,12 +32,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 5.21.1
- * Query Engine version: bf0e5e8a04cada8225617067eaa03d041e2bba36
+ * Prisma Client JS version: 5.22.0
+ * Query Engine version: 605197351a3c8bdd595af2d2a9bc3025bca48ea2
  */
 Prisma.prismaVersion = {
-  client: "5.21.1",
-  engine: "bf0e5e8a04cada8225617067eaa03d041e2bba36"
+  client: "5.22.0",
+  engine: "605197351a3c8bdd595af2d2a9bc3025bca48ea2"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -90,7 +90,7 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.Pickup_PointScalarFieldEnum = {
+exports.Prisma.PickupPointScalarFieldEnum = {
   id: 'id',
   geolocation: 'geolocation',
   createdAt: 'createdAt',
@@ -118,7 +118,7 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  Pickup_Point: 'Pickup_Point',
+  PickupPoint: 'PickupPoint',
   User: 'User'
 };
 /**
@@ -152,12 +152,12 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
-  "clientVersion": "5.21.1",
-  "engineVersion": "bf0e5e8a04cada8225617067eaa03d041e2bba36",
+  "clientVersion": "5.22.0",
+  "engineVersion": "605197351a3c8bdd595af2d2a9bc3025bca48ea2",
   "datasourceNames": [
     "db"
   ],
@@ -171,13 +171,13 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"driverAdapters\"]\n  output          = \"./generated/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"POSTGRES_URL\")\n}\n\nmodel Pickup_Point {\n  id          String   @id\n  geolocation String\n  createdAt   DateTime\n  user        User     @relation(fields: [owner_id], references: [id])\n  owner_id    String\n}\n\nmodel User {\n  id            String         @id @unique\n  email         String         @unique\n  password      String\n  username      String         @unique\n  user_type     Int\n  createdAt     DateTime\n  pickup_points Pickup_Point[]\n}\n",
-  "inlineSchemaHash": "5129252df045b49ece24f59218c3997de4698ee55a71e8134e04d7418ac400ef",
+  "inlineSchema": "generator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"driverAdapters\"]\n  output          = \"./generated/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"POSTGRES_URL\")\n}\n\nmodel PickupPoint {\n  id          String   @id\n  geolocation String\n  createdAt   DateTime\n  user        User     @relation(fields: [owner_id], references: [id])\n  owner_id    String\n}\n\nmodel User {\n  id            String        @id @unique\n  email         String        @unique\n  password      String\n  username      String        @unique\n  user_type     Int\n  createdAt     DateTime\n  pickup_points PickupPoint[]\n}\n",
+  "inlineSchemaHash": "a294273cad923a3c4967dc8048388fda9b270497714c98ef2cfaca2cd2457dec",
   "copyEngine": true
 }
 config.dirname = '/'
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"Pickup_Point\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"geolocation\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"Pickup_PointToUser\"},{\"name\":\"owner_id\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null},\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"password\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"username\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user_type\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"pickup_points\",\"kind\":\"object\",\"type\":\"Pickup_Point\",\"relationName\":\"Pickup_PointToUser\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"PickupPoint\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"geolocation\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"PickupPointToUser\"},{\"name\":\"owner_id\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null},\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"password\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"username\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user_type\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"pickup_points\",\"kind\":\"object\",\"type\":\"PickupPoint\",\"relationName\":\"PickupPointToUser\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = {
   getRuntime: () => require('./query_engine_bg.js'),

@@ -9,7 +9,7 @@ datasource db {
   url      = env("POSTGRES_URL")
 }
 
-model Pickup_Point {
+model PickupPoint {
   id          String   @id
   geolocation String
   createdAt   DateTime
@@ -18,11 +18,11 @@ model Pickup_Point {
 }
 
 model User {
-  id            String         @id @unique
-  email         String         @unique
+  id            String        @id @unique
+  email         String        @unique
   password      String
-  username      String         @unique
+  username      String        @unique
   user_type     Int
   createdAt     DateTime
-  pickup_points Pickup_Point[]
+  pickup_points PickupPoint[]
 }

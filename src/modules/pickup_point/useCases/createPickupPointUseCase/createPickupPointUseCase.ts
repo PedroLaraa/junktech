@@ -2,6 +2,9 @@ import { Injectable } from "@nestjs/common";
 import { User } from "../../../user/entities/user.entity";
 import { pickupPointRepository } from "../../repositories/PickupPointRepository";
 import { PickupPoint } from "../../entities/pickup_point.entity";
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
 
 interface CreatePickupPointRequest {
   geolocation: string,

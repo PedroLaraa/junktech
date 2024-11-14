@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Pickup_Point
+ * Model PickupPoint
  * 
  */
-export type Pickup_Point = $Result.DefaultSelection<Prisma.$Pickup_PointPayload>
+export type PickupPoint = $Result.DefaultSelection<Prisma.$PickupPointPayload>
 /**
  * Model User
  * 
@@ -31,8 +31,8 @@ export type User = $Result.DefaultSelection<Prisma.$UserPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Pickup_Points
- * const pickup_Points = await prisma.pickup_Point.findMany()
+ * // Fetch zero or more PickupPoints
+ * const pickupPoints = await prisma.pickupPoint.findMany()
  * ```
  *
  * 
@@ -52,8 +52,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Pickup_Points
-   * const pickup_Points = await prisma.pickup_Point.findMany()
+   * // Fetch zero or more PickupPoints
+   * const pickupPoints = await prisma.pickupPoint.findMany()
    * ```
    *
    * 
@@ -148,14 +148,14 @@ export class PrismaClient<
   $extends: $Extensions.ExtendsHook<"extends", Prisma.TypeMapCb, ExtArgs>
 
       /**
-   * `prisma.pickup_Point`: Exposes CRUD operations for the **Pickup_Point** model.
+   * `prisma.pickupPoint`: Exposes CRUD operations for the **PickupPoint** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Pickup_Points
-    * const pickup_Points = await prisma.pickup_Point.findMany()
+    * // Fetch zero or more PickupPoints
+    * const pickupPoints = await prisma.pickupPoint.findMany()
     * ```
     */
-  get pickup_Point(): Prisma.Pickup_PointDelegate<ExtArgs>;
+  get pickupPoint(): Prisma.PickupPointDelegate<ExtArgs>;
 
   /**
    * `prisma.user`: Exposes CRUD operations for the **User** model.
@@ -225,8 +225,8 @@ export namespace Prisma {
   export import Exact = $Public.Exact
 
   /**
-   * Prisma Client JS version: 5.21.1
-   * Query Engine version: bf0e5e8a04cada8225617067eaa03d041e2bba36
+   * Prisma Client JS version: 5.22.0
+   * Query Engine version: 605197351a3c8bdd595af2d2a9bc3025bca48ea2
    */
   export type PrismaVersion = {
     client: string
@@ -607,7 +607,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Pickup_Point: 'Pickup_Point',
+    PickupPoint: 'PickupPoint',
     User: 'User'
   };
 
@@ -624,77 +624,77 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> = {
     meta: {
-      modelProps: "pickup_Point" | "user"
+      modelProps: "pickupPoint" | "user"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Pickup_Point: {
-        payload: Prisma.$Pickup_PointPayload<ExtArgs>
-        fields: Prisma.Pickup_PointFieldRefs
+      PickupPoint: {
+        payload: Prisma.$PickupPointPayload<ExtArgs>
+        fields: Prisma.PickupPointFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.Pickup_PointFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload> | null
+            args: Prisma.PickupPointFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.Pickup_PointFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload>
+            args: Prisma.PickupPointFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload>
           }
           findFirst: {
-            args: Prisma.Pickup_PointFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload> | null
+            args: Prisma.PickupPointFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.Pickup_PointFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload>
+            args: Prisma.PickupPointFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload>
           }
           findMany: {
-            args: Prisma.Pickup_PointFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload>[]
+            args: Prisma.PickupPointFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload>[]
           }
           create: {
-            args: Prisma.Pickup_PointCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload>
+            args: Prisma.PickupPointCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload>
           }
           createMany: {
-            args: Prisma.Pickup_PointCreateManyArgs<ExtArgs>
+            args: Prisma.PickupPointCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.Pickup_PointCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload>[]
+            args: Prisma.PickupPointCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload>[]
           }
           delete: {
-            args: Prisma.Pickup_PointDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload>
+            args: Prisma.PickupPointDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload>
           }
           update: {
-            args: Prisma.Pickup_PointUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload>
+            args: Prisma.PickupPointUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload>
           }
           deleteMany: {
-            args: Prisma.Pickup_PointDeleteManyArgs<ExtArgs>
+            args: Prisma.PickupPointDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.Pickup_PointUpdateManyArgs<ExtArgs>
+            args: Prisma.PickupPointUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           upsert: {
-            args: Prisma.Pickup_PointUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Pickup_PointPayload>
+            args: Prisma.PickupPointUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PickupPointPayload>
           }
           aggregate: {
-            args: Prisma.Pickup_PointAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregatePickup_Point>
+            args: Prisma.PickupPointAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePickupPoint>
           }
           groupBy: {
-            args: Prisma.Pickup_PointGroupByArgs<ExtArgs>
-            result: $Utils.Optional<Pickup_PointGroupByOutputType>[]
+            args: Prisma.PickupPointGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PickupPointGroupByOutputType>[]
           }
           count: {
-            args: Prisma.Pickup_PointCountArgs<ExtArgs>
-            result: $Utils.Optional<Pickup_PointCountAggregateOutputType> | number
+            args: Prisma.PickupPointCountArgs<ExtArgs>
+            result: $Utils.Optional<PickupPointCountAggregateOutputType> | number
           }
         }
       }
@@ -955,7 +955,7 @@ export namespace Prisma {
    * UserCountOutputType without action
    */
   export type UserCountOutputTypeCountPickup_pointsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Pickup_PointWhereInput
+    where?: PickupPointWhereInput
   }
 
 
@@ -964,30 +964,30 @@ export namespace Prisma {
    */
 
   /**
-   * Model Pickup_Point
+   * Model PickupPoint
    */
 
-  export type AggregatePickup_Point = {
-    _count: Pickup_PointCountAggregateOutputType | null
-    _min: Pickup_PointMinAggregateOutputType | null
-    _max: Pickup_PointMaxAggregateOutputType | null
+  export type AggregatePickupPoint = {
+    _count: PickupPointCountAggregateOutputType | null
+    _min: PickupPointMinAggregateOutputType | null
+    _max: PickupPointMaxAggregateOutputType | null
   }
 
-  export type Pickup_PointMinAggregateOutputType = {
+  export type PickupPointMinAggregateOutputType = {
     id: string | null
     geolocation: string | null
     createdAt: Date | null
     owner_id: string | null
   }
 
-  export type Pickup_PointMaxAggregateOutputType = {
+  export type PickupPointMaxAggregateOutputType = {
     id: string | null
     geolocation: string | null
     createdAt: Date | null
     owner_id: string | null
   }
 
-  export type Pickup_PointCountAggregateOutputType = {
+  export type PickupPointCountAggregateOutputType = {
     id: number
     geolocation: number
     createdAt: number
@@ -996,21 +996,21 @@ export namespace Prisma {
   }
 
 
-  export type Pickup_PointMinAggregateInputType = {
+  export type PickupPointMinAggregateInputType = {
     id?: true
     geolocation?: true
     createdAt?: true
     owner_id?: true
   }
 
-  export type Pickup_PointMaxAggregateInputType = {
+  export type PickupPointMaxAggregateInputType = {
     id?: true
     geolocation?: true
     createdAt?: true
     owner_id?: true
   }
 
-  export type Pickup_PointCountAggregateInputType = {
+  export type PickupPointCountAggregateInputType = {
     id?: true
     geolocation?: true
     createdAt?: true
@@ -1018,134 +1018,134 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type Pickup_PointAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Pickup_Point to aggregate.
+     * Filter which PickupPoint to aggregate.
      */
-    where?: Pickup_PointWhereInput
+    where?: PickupPointWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Pickup_Points to fetch.
+     * Determine the order of PickupPoints to fetch.
      */
-    orderBy?: Pickup_PointOrderByWithRelationInput | Pickup_PointOrderByWithRelationInput[]
+    orderBy?: PickupPointOrderByWithRelationInput | PickupPointOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: Pickup_PointWhereUniqueInput
+    cursor?: PickupPointWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Pickup_Points from the position of the cursor.
+     * Take `±n` PickupPoints from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Pickup_Points.
+     * Skip the first `n` PickupPoints.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Pickup_Points
+     * Count returned PickupPoints
     **/
-    _count?: true | Pickup_PointCountAggregateInputType
+    _count?: true | PickupPointCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: Pickup_PointMinAggregateInputType
+    _min?: PickupPointMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: Pickup_PointMaxAggregateInputType
+    _max?: PickupPointMaxAggregateInputType
   }
 
-  export type GetPickup_PointAggregateType<T extends Pickup_PointAggregateArgs> = {
-        [P in keyof T & keyof AggregatePickup_Point]: P extends '_count' | 'count'
+  export type GetPickupPointAggregateType<T extends PickupPointAggregateArgs> = {
+        [P in keyof T & keyof AggregatePickupPoint]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregatePickup_Point[P]>
-      : GetScalarType<T[P], AggregatePickup_Point[P]>
+        : GetScalarType<T[P], AggregatePickupPoint[P]>
+      : GetScalarType<T[P], AggregatePickupPoint[P]>
   }
 
 
 
 
-  export type Pickup_PointGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Pickup_PointWhereInput
-    orderBy?: Pickup_PointOrderByWithAggregationInput | Pickup_PointOrderByWithAggregationInput[]
-    by: Pickup_PointScalarFieldEnum[] | Pickup_PointScalarFieldEnum
-    having?: Pickup_PointScalarWhereWithAggregatesInput
+  export type PickupPointGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PickupPointWhereInput
+    orderBy?: PickupPointOrderByWithAggregationInput | PickupPointOrderByWithAggregationInput[]
+    by: PickupPointScalarFieldEnum[] | PickupPointScalarFieldEnum
+    having?: PickupPointScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: Pickup_PointCountAggregateInputType | true
-    _min?: Pickup_PointMinAggregateInputType
-    _max?: Pickup_PointMaxAggregateInputType
+    _count?: PickupPointCountAggregateInputType | true
+    _min?: PickupPointMinAggregateInputType
+    _max?: PickupPointMaxAggregateInputType
   }
 
-  export type Pickup_PointGroupByOutputType = {
+  export type PickupPointGroupByOutputType = {
     id: string
     geolocation: string
     createdAt: Date
     owner_id: string
-    _count: Pickup_PointCountAggregateOutputType | null
-    _min: Pickup_PointMinAggregateOutputType | null
-    _max: Pickup_PointMaxAggregateOutputType | null
+    _count: PickupPointCountAggregateOutputType | null
+    _min: PickupPointMinAggregateOutputType | null
+    _max: PickupPointMaxAggregateOutputType | null
   }
 
-  type GetPickup_PointGroupByPayload<T extends Pickup_PointGroupByArgs> = Prisma.PrismaPromise<
+  type GetPickupPointGroupByPayload<T extends PickupPointGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<Pickup_PointGroupByOutputType, T['by']> &
+      PickEnumerable<PickupPointGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof Pickup_PointGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof PickupPointGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], Pickup_PointGroupByOutputType[P]>
-            : GetScalarType<T[P], Pickup_PointGroupByOutputType[P]>
+              : GetScalarType<T[P], PickupPointGroupByOutputType[P]>
+            : GetScalarType<T[P], PickupPointGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type Pickup_PointSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PickupPointSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     geolocation?: boolean
     createdAt?: boolean
     owner_id?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["pickup_Point"]>
+  }, ExtArgs["result"]["pickupPoint"]>
 
-  export type Pickup_PointSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PickupPointSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     geolocation?: boolean
     createdAt?: boolean
     owner_id?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["pickup_Point"]>
+  }, ExtArgs["result"]["pickupPoint"]>
 
-  export type Pickup_PointSelectScalar = {
+  export type PickupPointSelectScalar = {
     id?: boolean
     geolocation?: boolean
     createdAt?: boolean
     owner_id?: boolean
   }
 
-  export type Pickup_PointInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
-  export type Pickup_PointIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
 
-  export type $Pickup_PointPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Pickup_Point"
+  export type $PickupPointPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "PickupPoint"
     objects: {
       user: Prisma.$UserPayload<ExtArgs>
     }
@@ -1154,136 +1154,136 @@ export namespace Prisma {
       geolocation: string
       createdAt: Date
       owner_id: string
-    }, ExtArgs["result"]["pickup_Point"]>
+    }, ExtArgs["result"]["pickupPoint"]>
     composites: {}
   }
 
-  type Pickup_PointGetPayload<S extends boolean | null | undefined | Pickup_PointDefaultArgs> = $Result.GetResult<Prisma.$Pickup_PointPayload, S>
+  type PickupPointGetPayload<S extends boolean | null | undefined | PickupPointDefaultArgs> = $Result.GetResult<Prisma.$PickupPointPayload, S>
 
-  type Pickup_PointCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<Pickup_PointFindManyArgs, 'select' | 'include' | 'distinct'> & {
-      select?: Pickup_PointCountAggregateInputType | true
+  type PickupPointCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<PickupPointFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: PickupPointCountAggregateInputType | true
     }
 
-  export interface Pickup_PointDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Pickup_Point'], meta: { name: 'Pickup_Point' } }
+  export interface PickupPointDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PickupPoint'], meta: { name: 'PickupPoint' } }
     /**
-     * Find zero or one Pickup_Point that matches the filter.
-     * @param {Pickup_PointFindUniqueArgs} args - Arguments to find a Pickup_Point
+     * Find zero or one PickupPoint that matches the filter.
+     * @param {PickupPointFindUniqueArgs} args - Arguments to find a PickupPoint
      * @example
-     * // Get one Pickup_Point
-     * const pickup_Point = await prisma.pickup_Point.findUnique({
+     * // Get one PickupPoint
+     * const pickupPoint = await prisma.pickupPoint.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends Pickup_PointFindUniqueArgs>(args: SelectSubset<T, Pickup_PointFindUniqueArgs<ExtArgs>>): Prisma__Pickup_PointClient<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+    findUnique<T extends PickupPointFindUniqueArgs>(args: SelectSubset<T, PickupPointFindUniqueArgs<ExtArgs>>): Prisma__PickupPointClient<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
 
     /**
-     * Find one Pickup_Point that matches the filter or throw an error with `error.code='P2025'` 
+     * Find one PickupPoint that matches the filter or throw an error with `error.code='P2025'` 
      * if no matches were found.
-     * @param {Pickup_PointFindUniqueOrThrowArgs} args - Arguments to find a Pickup_Point
+     * @param {PickupPointFindUniqueOrThrowArgs} args - Arguments to find a PickupPoint
      * @example
-     * // Get one Pickup_Point
-     * const pickup_Point = await prisma.pickup_Point.findUniqueOrThrow({
+     * // Get one PickupPoint
+     * const pickupPoint = await prisma.pickupPoint.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends Pickup_PointFindUniqueOrThrowArgs>(args: SelectSubset<T, Pickup_PointFindUniqueOrThrowArgs<ExtArgs>>): Prisma__Pickup_PointClient<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+    findUniqueOrThrow<T extends PickupPointFindUniqueOrThrowArgs>(args: SelectSubset<T, PickupPointFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PickupPointClient<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
 
     /**
-     * Find the first Pickup_Point that matches the filter.
+     * Find the first PickupPoint that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Pickup_PointFindFirstArgs} args - Arguments to find a Pickup_Point
+     * @param {PickupPointFindFirstArgs} args - Arguments to find a PickupPoint
      * @example
-     * // Get one Pickup_Point
-     * const pickup_Point = await prisma.pickup_Point.findFirst({
+     * // Get one PickupPoint
+     * const pickupPoint = await prisma.pickupPoint.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends Pickup_PointFindFirstArgs>(args?: SelectSubset<T, Pickup_PointFindFirstArgs<ExtArgs>>): Prisma__Pickup_PointClient<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+    findFirst<T extends PickupPointFindFirstArgs>(args?: SelectSubset<T, PickupPointFindFirstArgs<ExtArgs>>): Prisma__PickupPointClient<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
 
     /**
-     * Find the first Pickup_Point that matches the filter or
+     * Find the first PickupPoint that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Pickup_PointFindFirstOrThrowArgs} args - Arguments to find a Pickup_Point
+     * @param {PickupPointFindFirstOrThrowArgs} args - Arguments to find a PickupPoint
      * @example
-     * // Get one Pickup_Point
-     * const pickup_Point = await prisma.pickup_Point.findFirstOrThrow({
+     * // Get one PickupPoint
+     * const pickupPoint = await prisma.pickupPoint.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends Pickup_PointFindFirstOrThrowArgs>(args?: SelectSubset<T, Pickup_PointFindFirstOrThrowArgs<ExtArgs>>): Prisma__Pickup_PointClient<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+    findFirstOrThrow<T extends PickupPointFindFirstOrThrowArgs>(args?: SelectSubset<T, PickupPointFindFirstOrThrowArgs<ExtArgs>>): Prisma__PickupPointClient<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
 
     /**
-     * Find zero or more Pickup_Points that matches the filter.
+     * Find zero or more PickupPoints that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Pickup_PointFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {PickupPointFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Pickup_Points
-     * const pickup_Points = await prisma.pickup_Point.findMany()
+     * // Get all PickupPoints
+     * const pickupPoints = await prisma.pickupPoint.findMany()
      * 
-     * // Get first 10 Pickup_Points
-     * const pickup_Points = await prisma.pickup_Point.findMany({ take: 10 })
+     * // Get first 10 PickupPoints
+     * const pickupPoints = await prisma.pickupPoint.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const pickup_PointWithIdOnly = await prisma.pickup_Point.findMany({ select: { id: true } })
+     * const pickupPointWithIdOnly = await prisma.pickupPoint.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends Pickup_PointFindManyArgs>(args?: SelectSubset<T, Pickup_PointFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "findMany">>
+    findMany<T extends PickupPointFindManyArgs>(args?: SelectSubset<T, PickupPointFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "findMany">>
 
     /**
-     * Create a Pickup_Point.
-     * @param {Pickup_PointCreateArgs} args - Arguments to create a Pickup_Point.
+     * Create a PickupPoint.
+     * @param {PickupPointCreateArgs} args - Arguments to create a PickupPoint.
      * @example
-     * // Create one Pickup_Point
-     * const Pickup_Point = await prisma.pickup_Point.create({
+     * // Create one PickupPoint
+     * const PickupPoint = await prisma.pickupPoint.create({
      *   data: {
-     *     // ... data to create a Pickup_Point
+     *     // ... data to create a PickupPoint
      *   }
      * })
      * 
      */
-    create<T extends Pickup_PointCreateArgs>(args: SelectSubset<T, Pickup_PointCreateArgs<ExtArgs>>): Prisma__Pickup_PointClient<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "create">, never, ExtArgs>
+    create<T extends PickupPointCreateArgs>(args: SelectSubset<T, PickupPointCreateArgs<ExtArgs>>): Prisma__PickupPointClient<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "create">, never, ExtArgs>
 
     /**
-     * Create many Pickup_Points.
-     * @param {Pickup_PointCreateManyArgs} args - Arguments to create many Pickup_Points.
+     * Create many PickupPoints.
+     * @param {PickupPointCreateManyArgs} args - Arguments to create many PickupPoints.
      * @example
-     * // Create many Pickup_Points
-     * const pickup_Point = await prisma.pickup_Point.createMany({
+     * // Create many PickupPoints
+     * const pickupPoint = await prisma.pickupPoint.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends Pickup_PointCreateManyArgs>(args?: SelectSubset<T, Pickup_PointCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends PickupPointCreateManyArgs>(args?: SelectSubset<T, PickupPointCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Pickup_Points and returns the data saved in the database.
-     * @param {Pickup_PointCreateManyAndReturnArgs} args - Arguments to create many Pickup_Points.
+     * Create many PickupPoints and returns the data saved in the database.
+     * @param {PickupPointCreateManyAndReturnArgs} args - Arguments to create many PickupPoints.
      * @example
-     * // Create many Pickup_Points
-     * const pickup_Point = await prisma.pickup_Point.createManyAndReturn({
+     * // Create many PickupPoints
+     * const pickupPoint = await prisma.pickupPoint.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Pickup_Points and only return the `id`
-     * const pickup_PointWithIdOnly = await prisma.pickup_Point.createManyAndReturn({ 
+     * // Create many PickupPoints and only return the `id`
+     * const pickupPointWithIdOnly = await prisma.pickupPoint.createManyAndReturn({ 
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1293,28 +1293,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends Pickup_PointCreateManyAndReturnArgs>(args?: SelectSubset<T, Pickup_PointCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "createManyAndReturn">>
+    createManyAndReturn<T extends PickupPointCreateManyAndReturnArgs>(args?: SelectSubset<T, PickupPointCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "createManyAndReturn">>
 
     /**
-     * Delete a Pickup_Point.
-     * @param {Pickup_PointDeleteArgs} args - Arguments to delete one Pickup_Point.
+     * Delete a PickupPoint.
+     * @param {PickupPointDeleteArgs} args - Arguments to delete one PickupPoint.
      * @example
-     * // Delete one Pickup_Point
-     * const Pickup_Point = await prisma.pickup_Point.delete({
+     * // Delete one PickupPoint
+     * const PickupPoint = await prisma.pickupPoint.delete({
      *   where: {
-     *     // ... filter to delete one Pickup_Point
+     *     // ... filter to delete one PickupPoint
      *   }
      * })
      * 
      */
-    delete<T extends Pickup_PointDeleteArgs>(args: SelectSubset<T, Pickup_PointDeleteArgs<ExtArgs>>): Prisma__Pickup_PointClient<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "delete">, never, ExtArgs>
+    delete<T extends PickupPointDeleteArgs>(args: SelectSubset<T, PickupPointDeleteArgs<ExtArgs>>): Prisma__PickupPointClient<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "delete">, never, ExtArgs>
 
     /**
-     * Update one Pickup_Point.
-     * @param {Pickup_PointUpdateArgs} args - Arguments to update one Pickup_Point.
+     * Update one PickupPoint.
+     * @param {PickupPointUpdateArgs} args - Arguments to update one PickupPoint.
      * @example
-     * // Update one Pickup_Point
-     * const pickup_Point = await prisma.pickup_Point.update({
+     * // Update one PickupPoint
+     * const pickupPoint = await prisma.pickupPoint.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1324,30 +1324,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends Pickup_PointUpdateArgs>(args: SelectSubset<T, Pickup_PointUpdateArgs<ExtArgs>>): Prisma__Pickup_PointClient<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "update">, never, ExtArgs>
+    update<T extends PickupPointUpdateArgs>(args: SelectSubset<T, PickupPointUpdateArgs<ExtArgs>>): Prisma__PickupPointClient<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "update">, never, ExtArgs>
 
     /**
-     * Delete zero or more Pickup_Points.
-     * @param {Pickup_PointDeleteManyArgs} args - Arguments to filter Pickup_Points to delete.
+     * Delete zero or more PickupPoints.
+     * @param {PickupPointDeleteManyArgs} args - Arguments to filter PickupPoints to delete.
      * @example
-     * // Delete a few Pickup_Points
-     * const { count } = await prisma.pickup_Point.deleteMany({
+     * // Delete a few PickupPoints
+     * const { count } = await prisma.pickupPoint.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends Pickup_PointDeleteManyArgs>(args?: SelectSubset<T, Pickup_PointDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends PickupPointDeleteManyArgs>(args?: SelectSubset<T, PickupPointDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Pickup_Points.
+     * Update zero or more PickupPoints.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Pickup_PointUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {PickupPointUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Pickup_Points
-     * const pickup_Point = await prisma.pickup_Point.updateMany({
+     * // Update many PickupPoints
+     * const pickupPoint = await prisma.pickupPoint.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1357,56 +1357,56 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends Pickup_PointUpdateManyArgs>(args: SelectSubset<T, Pickup_PointUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends PickupPointUpdateManyArgs>(args: SelectSubset<T, PickupPointUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one Pickup_Point.
-     * @param {Pickup_PointUpsertArgs} args - Arguments to update or create a Pickup_Point.
+     * Create or update one PickupPoint.
+     * @param {PickupPointUpsertArgs} args - Arguments to update or create a PickupPoint.
      * @example
-     * // Update or create a Pickup_Point
-     * const pickup_Point = await prisma.pickup_Point.upsert({
+     * // Update or create a PickupPoint
+     * const pickupPoint = await prisma.pickupPoint.upsert({
      *   create: {
-     *     // ... data to create a Pickup_Point
+     *     // ... data to create a PickupPoint
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Pickup_Point we want to update
+     *     // ... the filter for the PickupPoint we want to update
      *   }
      * })
      */
-    upsert<T extends Pickup_PointUpsertArgs>(args: SelectSubset<T, Pickup_PointUpsertArgs<ExtArgs>>): Prisma__Pickup_PointClient<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+    upsert<T extends PickupPointUpsertArgs>(args: SelectSubset<T, PickupPointUpsertArgs<ExtArgs>>): Prisma__PickupPointClient<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
 
 
     /**
-     * Count the number of Pickup_Points.
+     * Count the number of PickupPoints.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Pickup_PointCountArgs} args - Arguments to filter Pickup_Points to count.
+     * @param {PickupPointCountArgs} args - Arguments to filter PickupPoints to count.
      * @example
-     * // Count the number of Pickup_Points
-     * const count = await prisma.pickup_Point.count({
+     * // Count the number of PickupPoints
+     * const count = await prisma.pickupPoint.count({
      *   where: {
-     *     // ... the filter for the Pickup_Points we want to count
+     *     // ... the filter for the PickupPoints we want to count
      *   }
      * })
     **/
-    count<T extends Pickup_PointCountArgs>(
-      args?: Subset<T, Pickup_PointCountArgs>,
+    count<T extends PickupPointCountArgs>(
+      args?: Subset<T, PickupPointCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], Pickup_PointCountAggregateOutputType>
+          : GetScalarType<T['select'], PickupPointCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Pickup_Point.
+     * Allows you to perform aggregations operations on a PickupPoint.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Pickup_PointAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {PickupPointAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1426,13 +1426,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends Pickup_PointAggregateArgs>(args: Subset<T, Pickup_PointAggregateArgs>): Prisma.PrismaPromise<GetPickup_PointAggregateType<T>>
+    aggregate<T extends PickupPointAggregateArgs>(args: Subset<T, PickupPointAggregateArgs>): Prisma.PrismaPromise<GetPickupPointAggregateType<T>>
 
     /**
-     * Group by Pickup_Point.
+     * Group by PickupPoint.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Pickup_PointGroupByArgs} args - Group by arguments.
+     * @param {PickupPointGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1447,14 +1447,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends Pickup_PointGroupByArgs,
+      T extends PickupPointGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: Pickup_PointGroupByArgs['orderBy'] }
-        : { orderBy?: Pickup_PointGroupByArgs['orderBy'] },
+        ? { orderBy: PickupPointGroupByArgs['orderBy'] }
+        : { orderBy?: PickupPointGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1503,20 +1503,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, Pickup_PointGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPickup_PointGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, PickupPointGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPickupPointGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Pickup_Point model
+   * Fields of the PickupPoint model
    */
-  readonly fields: Pickup_PointFieldRefs;
+  readonly fields: PickupPointFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Pickup_Point.
+   * The delegate class that acts as a "Promise-like" for PickupPoint.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__Pickup_PointClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__PickupPointClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
     /**
@@ -1545,342 +1545,342 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Pickup_Point model
+   * Fields of the PickupPoint model
    */ 
-  interface Pickup_PointFieldRefs {
-    readonly id: FieldRef<"Pickup_Point", 'String'>
-    readonly geolocation: FieldRef<"Pickup_Point", 'String'>
-    readonly createdAt: FieldRef<"Pickup_Point", 'DateTime'>
-    readonly owner_id: FieldRef<"Pickup_Point", 'String'>
+  interface PickupPointFieldRefs {
+    readonly id: FieldRef<"PickupPoint", 'String'>
+    readonly geolocation: FieldRef<"PickupPoint", 'String'>
+    readonly createdAt: FieldRef<"PickupPoint", 'DateTime'>
+    readonly owner_id: FieldRef<"PickupPoint", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Pickup_Point findUnique
+   * PickupPoint findUnique
    */
-  export type Pickup_PointFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * Filter, which Pickup_Point to fetch.
+     * Filter, which PickupPoint to fetch.
      */
-    where: Pickup_PointWhereUniqueInput
+    where: PickupPointWhereUniqueInput
   }
 
   /**
-   * Pickup_Point findUniqueOrThrow
+   * PickupPoint findUniqueOrThrow
    */
-  export type Pickup_PointFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * Filter, which Pickup_Point to fetch.
+     * Filter, which PickupPoint to fetch.
      */
-    where: Pickup_PointWhereUniqueInput
+    where: PickupPointWhereUniqueInput
   }
 
   /**
-   * Pickup_Point findFirst
+   * PickupPoint findFirst
    */
-  export type Pickup_PointFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * Filter, which Pickup_Point to fetch.
+     * Filter, which PickupPoint to fetch.
      */
-    where?: Pickup_PointWhereInput
+    where?: PickupPointWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Pickup_Points to fetch.
+     * Determine the order of PickupPoints to fetch.
      */
-    orderBy?: Pickup_PointOrderByWithRelationInput | Pickup_PointOrderByWithRelationInput[]
+    orderBy?: PickupPointOrderByWithRelationInput | PickupPointOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Pickup_Points.
+     * Sets the position for searching for PickupPoints.
      */
-    cursor?: Pickup_PointWhereUniqueInput
+    cursor?: PickupPointWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Pickup_Points from the position of the cursor.
+     * Take `±n` PickupPoints from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Pickup_Points.
+     * Skip the first `n` PickupPoints.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Pickup_Points.
+     * Filter by unique combinations of PickupPoints.
      */
-    distinct?: Pickup_PointScalarFieldEnum | Pickup_PointScalarFieldEnum[]
+    distinct?: PickupPointScalarFieldEnum | PickupPointScalarFieldEnum[]
   }
 
   /**
-   * Pickup_Point findFirstOrThrow
+   * PickupPoint findFirstOrThrow
    */
-  export type Pickup_PointFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * Filter, which Pickup_Point to fetch.
+     * Filter, which PickupPoint to fetch.
      */
-    where?: Pickup_PointWhereInput
+    where?: PickupPointWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Pickup_Points to fetch.
+     * Determine the order of PickupPoints to fetch.
      */
-    orderBy?: Pickup_PointOrderByWithRelationInput | Pickup_PointOrderByWithRelationInput[]
+    orderBy?: PickupPointOrderByWithRelationInput | PickupPointOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Pickup_Points.
+     * Sets the position for searching for PickupPoints.
      */
-    cursor?: Pickup_PointWhereUniqueInput
+    cursor?: PickupPointWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Pickup_Points from the position of the cursor.
+     * Take `±n` PickupPoints from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Pickup_Points.
+     * Skip the first `n` PickupPoints.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Pickup_Points.
+     * Filter by unique combinations of PickupPoints.
      */
-    distinct?: Pickup_PointScalarFieldEnum | Pickup_PointScalarFieldEnum[]
+    distinct?: PickupPointScalarFieldEnum | PickupPointScalarFieldEnum[]
   }
 
   /**
-   * Pickup_Point findMany
+   * PickupPoint findMany
    */
-  export type Pickup_PointFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * Filter, which Pickup_Points to fetch.
+     * Filter, which PickupPoints to fetch.
      */
-    where?: Pickup_PointWhereInput
+    where?: PickupPointWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Pickup_Points to fetch.
+     * Determine the order of PickupPoints to fetch.
      */
-    orderBy?: Pickup_PointOrderByWithRelationInput | Pickup_PointOrderByWithRelationInput[]
+    orderBy?: PickupPointOrderByWithRelationInput | PickupPointOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Pickup_Points.
+     * Sets the position for listing PickupPoints.
      */
-    cursor?: Pickup_PointWhereUniqueInput
+    cursor?: PickupPointWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Pickup_Points from the position of the cursor.
+     * Take `±n` PickupPoints from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Pickup_Points.
+     * Skip the first `n` PickupPoints.
      */
     skip?: number
-    distinct?: Pickup_PointScalarFieldEnum | Pickup_PointScalarFieldEnum[]
+    distinct?: PickupPointScalarFieldEnum | PickupPointScalarFieldEnum[]
   }
 
   /**
-   * Pickup_Point create
+   * PickupPoint create
    */
-  export type Pickup_PointCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * The data needed to create a Pickup_Point.
+     * The data needed to create a PickupPoint.
      */
-    data: XOR<Pickup_PointCreateInput, Pickup_PointUncheckedCreateInput>
+    data: XOR<PickupPointCreateInput, PickupPointUncheckedCreateInput>
   }
 
   /**
-   * Pickup_Point createMany
+   * PickupPoint createMany
    */
-  export type Pickup_PointCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Pickup_Points.
+     * The data used to create many PickupPoints.
      */
-    data: Pickup_PointCreateManyInput | Pickup_PointCreateManyInput[]
+    data: PickupPointCreateManyInput | PickupPointCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Pickup_Point createManyAndReturn
+   * PickupPoint createManyAndReturn
    */
-  export type Pickup_PointCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelectCreateManyAndReturn<ExtArgs> | null
+    select?: PickupPointSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * The data used to create many Pickup_Points.
+     * The data used to create many PickupPoints.
      */
-    data: Pickup_PointCreateManyInput | Pickup_PointCreateManyInput[]
+    data: PickupPointCreateManyInput | PickupPointCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: PickupPointIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Pickup_Point update
+   * PickupPoint update
    */
-  export type Pickup_PointUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * The data needed to update a Pickup_Point.
+     * The data needed to update a PickupPoint.
      */
-    data: XOR<Pickup_PointUpdateInput, Pickup_PointUncheckedUpdateInput>
+    data: XOR<PickupPointUpdateInput, PickupPointUncheckedUpdateInput>
     /**
-     * Choose, which Pickup_Point to update.
+     * Choose, which PickupPoint to update.
      */
-    where: Pickup_PointWhereUniqueInput
+    where: PickupPointWhereUniqueInput
   }
 
   /**
-   * Pickup_Point updateMany
+   * PickupPoint updateMany
    */
-  export type Pickup_PointUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Pickup_Points.
+     * The data used to update PickupPoints.
      */
-    data: XOR<Pickup_PointUpdateManyMutationInput, Pickup_PointUncheckedUpdateManyInput>
+    data: XOR<PickupPointUpdateManyMutationInput, PickupPointUncheckedUpdateManyInput>
     /**
-     * Filter which Pickup_Points to update
+     * Filter which PickupPoints to update
      */
-    where?: Pickup_PointWhereInput
+    where?: PickupPointWhereInput
   }
 
   /**
-   * Pickup_Point upsert
+   * PickupPoint upsert
    */
-  export type Pickup_PointUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * The filter to search for the Pickup_Point to update in case it exists.
+     * The filter to search for the PickupPoint to update in case it exists.
      */
-    where: Pickup_PointWhereUniqueInput
+    where: PickupPointWhereUniqueInput
     /**
-     * In case the Pickup_Point found by the `where` argument doesn't exist, create a new Pickup_Point with this data.
+     * In case the PickupPoint found by the `where` argument doesn't exist, create a new PickupPoint with this data.
      */
-    create: XOR<Pickup_PointCreateInput, Pickup_PointUncheckedCreateInput>
+    create: XOR<PickupPointCreateInput, PickupPointUncheckedCreateInput>
     /**
-     * In case the Pickup_Point was found with the provided `where` argument, update it with this data.
+     * In case the PickupPoint was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<Pickup_PointUpdateInput, Pickup_PointUncheckedUpdateInput>
+    update: XOR<PickupPointUpdateInput, PickupPointUncheckedUpdateInput>
   }
 
   /**
-   * Pickup_Point delete
+   * PickupPoint delete
    */
-  export type Pickup_PointDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
     /**
-     * Filter which Pickup_Point to delete.
+     * Filter which PickupPoint to delete.
      */
-    where: Pickup_PointWhereUniqueInput
+    where: PickupPointWhereUniqueInput
   }
 
   /**
-   * Pickup_Point deleteMany
+   * PickupPoint deleteMany
    */
-  export type Pickup_PointDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Pickup_Points to delete
+     * Filter which PickupPoints to delete
      */
-    where?: Pickup_PointWhereInput
+    where?: PickupPointWhereInput
   }
 
   /**
-   * Pickup_Point without action
+   * PickupPoint without action
    */
-  export type Pickup_PointDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PickupPointDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
+    include?: PickupPointInclude<ExtArgs> | null
   }
 
 
@@ -2121,7 +2121,7 @@ export namespace Prisma {
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
     objects: {
-      pickup_points: Prisma.$Pickup_PointPayload<ExtArgs>[]
+      pickup_points: Prisma.$PickupPointPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2494,7 +2494,7 @@ export namespace Prisma {
    */
   export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    pickup_points<T extends User$pickup_pointsArgs<ExtArgs> = {}>(args?: Subset<T, User$pickup_pointsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Pickup_PointPayload<ExtArgs>, T, "findMany"> | Null>
+    pickup_points<T extends User$pickup_pointsArgs<ExtArgs> = {}>(args?: Subset<T, User$pickup_pointsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PickupPointPayload<ExtArgs>, T, "findMany"> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2848,19 +2848,19 @@ export namespace Prisma {
    */
   export type User$pickup_pointsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pickup_Point
+     * Select specific fields to fetch from the PickupPoint
      */
-    select?: Pickup_PointSelect<ExtArgs> | null
+    select?: PickupPointSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Pickup_PointInclude<ExtArgs> | null
-    where?: Pickup_PointWhereInput
-    orderBy?: Pickup_PointOrderByWithRelationInput | Pickup_PointOrderByWithRelationInput[]
-    cursor?: Pickup_PointWhereUniqueInput
+    include?: PickupPointInclude<ExtArgs> | null
+    where?: PickupPointWhereInput
+    orderBy?: PickupPointOrderByWithRelationInput | PickupPointOrderByWithRelationInput[]
+    cursor?: PickupPointWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: Pickup_PointScalarFieldEnum | Pickup_PointScalarFieldEnum[]
+    distinct?: PickupPointScalarFieldEnum | PickupPointScalarFieldEnum[]
   }
 
   /**
@@ -2892,14 +2892,14 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const Pickup_PointScalarFieldEnum: {
+  export const PickupPointScalarFieldEnum: {
     id: 'id',
     geolocation: 'geolocation',
     createdAt: 'createdAt',
     owner_id: 'owner_id'
   };
 
-  export type Pickup_PointScalarFieldEnum = (typeof Pickup_PointScalarFieldEnum)[keyof typeof Pickup_PointScalarFieldEnum]
+  export type PickupPointScalarFieldEnum = (typeof PickupPointScalarFieldEnum)[keyof typeof PickupPointScalarFieldEnum]
 
 
   export const UserScalarFieldEnum: {
@@ -2994,18 +2994,18 @@ export namespace Prisma {
    */
 
 
-  export type Pickup_PointWhereInput = {
-    AND?: Pickup_PointWhereInput | Pickup_PointWhereInput[]
-    OR?: Pickup_PointWhereInput[]
-    NOT?: Pickup_PointWhereInput | Pickup_PointWhereInput[]
-    id?: StringFilter<"Pickup_Point"> | string
-    geolocation?: StringFilter<"Pickup_Point"> | string
-    createdAt?: DateTimeFilter<"Pickup_Point"> | Date | string
-    owner_id?: StringFilter<"Pickup_Point"> | string
+  export type PickupPointWhereInput = {
+    AND?: PickupPointWhereInput | PickupPointWhereInput[]
+    OR?: PickupPointWhereInput[]
+    NOT?: PickupPointWhereInput | PickupPointWhereInput[]
+    id?: StringFilter<"PickupPoint"> | string
+    geolocation?: StringFilter<"PickupPoint"> | string
+    createdAt?: DateTimeFilter<"PickupPoint"> | Date | string
+    owner_id?: StringFilter<"PickupPoint"> | string
     user?: XOR<UserRelationFilter, UserWhereInput>
   }
 
-  export type Pickup_PointOrderByWithRelationInput = {
+  export type PickupPointOrderByWithRelationInput = {
     id?: SortOrder
     geolocation?: SortOrder
     createdAt?: SortOrder
@@ -3013,35 +3013,35 @@ export namespace Prisma {
     user?: UserOrderByWithRelationInput
   }
 
-  export type Pickup_PointWhereUniqueInput = Prisma.AtLeast<{
+  export type PickupPointWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: Pickup_PointWhereInput | Pickup_PointWhereInput[]
-    OR?: Pickup_PointWhereInput[]
-    NOT?: Pickup_PointWhereInput | Pickup_PointWhereInput[]
-    geolocation?: StringFilter<"Pickup_Point"> | string
-    createdAt?: DateTimeFilter<"Pickup_Point"> | Date | string
-    owner_id?: StringFilter<"Pickup_Point"> | string
+    AND?: PickupPointWhereInput | PickupPointWhereInput[]
+    OR?: PickupPointWhereInput[]
+    NOT?: PickupPointWhereInput | PickupPointWhereInput[]
+    geolocation?: StringFilter<"PickupPoint"> | string
+    createdAt?: DateTimeFilter<"PickupPoint"> | Date | string
+    owner_id?: StringFilter<"PickupPoint"> | string
     user?: XOR<UserRelationFilter, UserWhereInput>
   }, "id">
 
-  export type Pickup_PointOrderByWithAggregationInput = {
+  export type PickupPointOrderByWithAggregationInput = {
     id?: SortOrder
     geolocation?: SortOrder
     createdAt?: SortOrder
     owner_id?: SortOrder
-    _count?: Pickup_PointCountOrderByAggregateInput
-    _max?: Pickup_PointMaxOrderByAggregateInput
-    _min?: Pickup_PointMinOrderByAggregateInput
+    _count?: PickupPointCountOrderByAggregateInput
+    _max?: PickupPointMaxOrderByAggregateInput
+    _min?: PickupPointMinOrderByAggregateInput
   }
 
-  export type Pickup_PointScalarWhereWithAggregatesInput = {
-    AND?: Pickup_PointScalarWhereWithAggregatesInput | Pickup_PointScalarWhereWithAggregatesInput[]
-    OR?: Pickup_PointScalarWhereWithAggregatesInput[]
-    NOT?: Pickup_PointScalarWhereWithAggregatesInput | Pickup_PointScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Pickup_Point"> | string
-    geolocation?: StringWithAggregatesFilter<"Pickup_Point"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Pickup_Point"> | Date | string
-    owner_id?: StringWithAggregatesFilter<"Pickup_Point"> | string
+  export type PickupPointScalarWhereWithAggregatesInput = {
+    AND?: PickupPointScalarWhereWithAggregatesInput | PickupPointScalarWhereWithAggregatesInput[]
+    OR?: PickupPointScalarWhereWithAggregatesInput[]
+    NOT?: PickupPointScalarWhereWithAggregatesInput | PickupPointScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"PickupPoint"> | string
+    geolocation?: StringWithAggregatesFilter<"PickupPoint"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"PickupPoint"> | Date | string
+    owner_id?: StringWithAggregatesFilter<"PickupPoint"> | string
   }
 
   export type UserWhereInput = {
@@ -3054,7 +3054,7 @@ export namespace Prisma {
     username?: StringFilter<"User"> | string
     user_type?: IntFilter<"User"> | number
     createdAt?: DateTimeFilter<"User"> | Date | string
-    pickup_points?: Pickup_PointListRelationFilter
+    pickup_points?: PickupPointListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -3064,7 +3064,7 @@ export namespace Prisma {
     username?: SortOrder
     user_type?: SortOrder
     createdAt?: SortOrder
-    pickup_points?: Pickup_PointOrderByRelationAggregateInput
+    pickup_points?: PickupPointOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -3077,7 +3077,7 @@ export namespace Prisma {
     password?: StringFilter<"User"> | string
     user_type?: IntFilter<"User"> | number
     createdAt?: DateTimeFilter<"User"> | Date | string
-    pickup_points?: Pickup_PointListRelationFilter
+    pickup_points?: PickupPointListRelationFilter
   }, "id" | "id" | "email" | "username">
 
   export type UserOrderByWithAggregationInput = {
@@ -3106,48 +3106,48 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
-  export type Pickup_PointCreateInput = {
+  export type PickupPointCreateInput = {
     id: string
     geolocation: string
     createdAt: Date | string
     user: UserCreateNestedOneWithoutPickup_pointsInput
   }
 
-  export type Pickup_PointUncheckedCreateInput = {
+  export type PickupPointUncheckedCreateInput = {
     id: string
     geolocation: string
     createdAt: Date | string
     owner_id: string
   }
 
-  export type Pickup_PointUpdateInput = {
+  export type PickupPointUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     geolocation?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutPickup_pointsNestedInput
   }
 
-  export type Pickup_PointUncheckedUpdateInput = {
+  export type PickupPointUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     geolocation?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     owner_id?: StringFieldUpdateOperationsInput | string
   }
 
-  export type Pickup_PointCreateManyInput = {
+  export type PickupPointCreateManyInput = {
     id: string
     geolocation: string
     createdAt: Date | string
     owner_id: string
   }
 
-  export type Pickup_PointUpdateManyMutationInput = {
+  export type PickupPointUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     geolocation?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Pickup_PointUncheckedUpdateManyInput = {
+  export type PickupPointUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     geolocation?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3161,7 +3161,7 @@ export namespace Prisma {
     username: string
     user_type: number
     createdAt: Date | string
-    pickup_points?: Pickup_PointCreateNestedManyWithoutUserInput
+    pickup_points?: PickupPointCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -3171,7 +3171,7 @@ export namespace Prisma {
     username: string
     user_type: number
     createdAt: Date | string
-    pickup_points?: Pickup_PointUncheckedCreateNestedManyWithoutUserInput
+    pickup_points?: PickupPointUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -3181,7 +3181,7 @@ export namespace Prisma {
     username?: StringFieldUpdateOperationsInput | string
     user_type?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    pickup_points?: Pickup_PointUpdateManyWithoutUserNestedInput
+    pickup_points?: PickupPointUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -3191,7 +3191,7 @@ export namespace Prisma {
     username?: StringFieldUpdateOperationsInput | string
     user_type?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    pickup_points?: Pickup_PointUncheckedUpdateManyWithoutUserNestedInput
+    pickup_points?: PickupPointUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -3252,21 +3252,21 @@ export namespace Prisma {
     isNot?: UserWhereInput
   }
 
-  export type Pickup_PointCountOrderByAggregateInput = {
+  export type PickupPointCountOrderByAggregateInput = {
     id?: SortOrder
     geolocation?: SortOrder
     createdAt?: SortOrder
     owner_id?: SortOrder
   }
 
-  export type Pickup_PointMaxOrderByAggregateInput = {
+  export type PickupPointMaxOrderByAggregateInput = {
     id?: SortOrder
     geolocation?: SortOrder
     createdAt?: SortOrder
     owner_id?: SortOrder
   }
 
-  export type Pickup_PointMinOrderByAggregateInput = {
+  export type PickupPointMinOrderByAggregateInput = {
     id?: SortOrder
     geolocation?: SortOrder
     createdAt?: SortOrder
@@ -3316,13 +3316,13 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type Pickup_PointListRelationFilter = {
-    every?: Pickup_PointWhereInput
-    some?: Pickup_PointWhereInput
-    none?: Pickup_PointWhereInput
+  export type PickupPointListRelationFilter = {
+    every?: PickupPointWhereInput
+    some?: PickupPointWhereInput
+    none?: PickupPointWhereInput
   }
 
-  export type Pickup_PointOrderByRelationAggregateInput = {
+  export type PickupPointOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -3399,18 +3399,18 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutPickup_pointsInput, UserUpdateWithoutPickup_pointsInput>, UserUncheckedUpdateWithoutPickup_pointsInput>
   }
 
-  export type Pickup_PointCreateNestedManyWithoutUserInput = {
-    create?: XOR<Pickup_PointCreateWithoutUserInput, Pickup_PointUncheckedCreateWithoutUserInput> | Pickup_PointCreateWithoutUserInput[] | Pickup_PointUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: Pickup_PointCreateOrConnectWithoutUserInput | Pickup_PointCreateOrConnectWithoutUserInput[]
-    createMany?: Pickup_PointCreateManyUserInputEnvelope
-    connect?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
+  export type PickupPointCreateNestedManyWithoutUserInput = {
+    create?: XOR<PickupPointCreateWithoutUserInput, PickupPointUncheckedCreateWithoutUserInput> | PickupPointCreateWithoutUserInput[] | PickupPointUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PickupPointCreateOrConnectWithoutUserInput | PickupPointCreateOrConnectWithoutUserInput[]
+    createMany?: PickupPointCreateManyUserInputEnvelope
+    connect?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
   }
 
-  export type Pickup_PointUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<Pickup_PointCreateWithoutUserInput, Pickup_PointUncheckedCreateWithoutUserInput> | Pickup_PointCreateWithoutUserInput[] | Pickup_PointUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: Pickup_PointCreateOrConnectWithoutUserInput | Pickup_PointCreateOrConnectWithoutUserInput[]
-    createMany?: Pickup_PointCreateManyUserInputEnvelope
-    connect?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
+  export type PickupPointUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<PickupPointCreateWithoutUserInput, PickupPointUncheckedCreateWithoutUserInput> | PickupPointCreateWithoutUserInput[] | PickupPointUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PickupPointCreateOrConnectWithoutUserInput | PickupPointCreateOrConnectWithoutUserInput[]
+    createMany?: PickupPointCreateManyUserInputEnvelope
+    connect?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -3421,32 +3421,32 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type Pickup_PointUpdateManyWithoutUserNestedInput = {
-    create?: XOR<Pickup_PointCreateWithoutUserInput, Pickup_PointUncheckedCreateWithoutUserInput> | Pickup_PointCreateWithoutUserInput[] | Pickup_PointUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: Pickup_PointCreateOrConnectWithoutUserInput | Pickup_PointCreateOrConnectWithoutUserInput[]
-    upsert?: Pickup_PointUpsertWithWhereUniqueWithoutUserInput | Pickup_PointUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: Pickup_PointCreateManyUserInputEnvelope
-    set?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
-    disconnect?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
-    delete?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
-    connect?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
-    update?: Pickup_PointUpdateWithWhereUniqueWithoutUserInput | Pickup_PointUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: Pickup_PointUpdateManyWithWhereWithoutUserInput | Pickup_PointUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: Pickup_PointScalarWhereInput | Pickup_PointScalarWhereInput[]
+  export type PickupPointUpdateManyWithoutUserNestedInput = {
+    create?: XOR<PickupPointCreateWithoutUserInput, PickupPointUncheckedCreateWithoutUserInput> | PickupPointCreateWithoutUserInput[] | PickupPointUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PickupPointCreateOrConnectWithoutUserInput | PickupPointCreateOrConnectWithoutUserInput[]
+    upsert?: PickupPointUpsertWithWhereUniqueWithoutUserInput | PickupPointUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: PickupPointCreateManyUserInputEnvelope
+    set?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
+    disconnect?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
+    delete?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
+    connect?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
+    update?: PickupPointUpdateWithWhereUniqueWithoutUserInput | PickupPointUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: PickupPointUpdateManyWithWhereWithoutUserInput | PickupPointUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: PickupPointScalarWhereInput | PickupPointScalarWhereInput[]
   }
 
-  export type Pickup_PointUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<Pickup_PointCreateWithoutUserInput, Pickup_PointUncheckedCreateWithoutUserInput> | Pickup_PointCreateWithoutUserInput[] | Pickup_PointUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: Pickup_PointCreateOrConnectWithoutUserInput | Pickup_PointCreateOrConnectWithoutUserInput[]
-    upsert?: Pickup_PointUpsertWithWhereUniqueWithoutUserInput | Pickup_PointUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: Pickup_PointCreateManyUserInputEnvelope
-    set?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
-    disconnect?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
-    delete?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
-    connect?: Pickup_PointWhereUniqueInput | Pickup_PointWhereUniqueInput[]
-    update?: Pickup_PointUpdateWithWhereUniqueWithoutUserInput | Pickup_PointUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: Pickup_PointUpdateManyWithWhereWithoutUserInput | Pickup_PointUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: Pickup_PointScalarWhereInput | Pickup_PointScalarWhereInput[]
+  export type PickupPointUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<PickupPointCreateWithoutUserInput, PickupPointUncheckedCreateWithoutUserInput> | PickupPointCreateWithoutUserInput[] | PickupPointUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PickupPointCreateOrConnectWithoutUserInput | PickupPointCreateOrConnectWithoutUserInput[]
+    upsert?: PickupPointUpsertWithWhereUniqueWithoutUserInput | PickupPointUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: PickupPointCreateManyUserInputEnvelope
+    set?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
+    disconnect?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
+    delete?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
+    connect?: PickupPointWhereUniqueInput | PickupPointWhereUniqueInput[]
+    update?: PickupPointUpdateWithWhereUniqueWithoutUserInput | PickupPointUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: PickupPointUpdateManyWithWhereWithoutUserInput | PickupPointUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: PickupPointScalarWhereInput | PickupPointScalarWhereInput[]
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -3595,73 +3595,73 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Pickup_PointCreateWithoutUserInput = {
+  export type PickupPointCreateWithoutUserInput = {
     id: string
     geolocation: string
     createdAt: Date | string
   }
 
-  export type Pickup_PointUncheckedCreateWithoutUserInput = {
+  export type PickupPointUncheckedCreateWithoutUserInput = {
     id: string
     geolocation: string
     createdAt: Date | string
   }
 
-  export type Pickup_PointCreateOrConnectWithoutUserInput = {
-    where: Pickup_PointWhereUniqueInput
-    create: XOR<Pickup_PointCreateWithoutUserInput, Pickup_PointUncheckedCreateWithoutUserInput>
+  export type PickupPointCreateOrConnectWithoutUserInput = {
+    where: PickupPointWhereUniqueInput
+    create: XOR<PickupPointCreateWithoutUserInput, PickupPointUncheckedCreateWithoutUserInput>
   }
 
-  export type Pickup_PointCreateManyUserInputEnvelope = {
-    data: Pickup_PointCreateManyUserInput | Pickup_PointCreateManyUserInput[]
+  export type PickupPointCreateManyUserInputEnvelope = {
+    data: PickupPointCreateManyUserInput | PickupPointCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type Pickup_PointUpsertWithWhereUniqueWithoutUserInput = {
-    where: Pickup_PointWhereUniqueInput
-    update: XOR<Pickup_PointUpdateWithoutUserInput, Pickup_PointUncheckedUpdateWithoutUserInput>
-    create: XOR<Pickup_PointCreateWithoutUserInput, Pickup_PointUncheckedCreateWithoutUserInput>
+  export type PickupPointUpsertWithWhereUniqueWithoutUserInput = {
+    where: PickupPointWhereUniqueInput
+    update: XOR<PickupPointUpdateWithoutUserInput, PickupPointUncheckedUpdateWithoutUserInput>
+    create: XOR<PickupPointCreateWithoutUserInput, PickupPointUncheckedCreateWithoutUserInput>
   }
 
-  export type Pickup_PointUpdateWithWhereUniqueWithoutUserInput = {
-    where: Pickup_PointWhereUniqueInput
-    data: XOR<Pickup_PointUpdateWithoutUserInput, Pickup_PointUncheckedUpdateWithoutUserInput>
+  export type PickupPointUpdateWithWhereUniqueWithoutUserInput = {
+    where: PickupPointWhereUniqueInput
+    data: XOR<PickupPointUpdateWithoutUserInput, PickupPointUncheckedUpdateWithoutUserInput>
   }
 
-  export type Pickup_PointUpdateManyWithWhereWithoutUserInput = {
-    where: Pickup_PointScalarWhereInput
-    data: XOR<Pickup_PointUpdateManyMutationInput, Pickup_PointUncheckedUpdateManyWithoutUserInput>
+  export type PickupPointUpdateManyWithWhereWithoutUserInput = {
+    where: PickupPointScalarWhereInput
+    data: XOR<PickupPointUpdateManyMutationInput, PickupPointUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type Pickup_PointScalarWhereInput = {
-    AND?: Pickup_PointScalarWhereInput | Pickup_PointScalarWhereInput[]
-    OR?: Pickup_PointScalarWhereInput[]
-    NOT?: Pickup_PointScalarWhereInput | Pickup_PointScalarWhereInput[]
-    id?: StringFilter<"Pickup_Point"> | string
-    geolocation?: StringFilter<"Pickup_Point"> | string
-    createdAt?: DateTimeFilter<"Pickup_Point"> | Date | string
-    owner_id?: StringFilter<"Pickup_Point"> | string
+  export type PickupPointScalarWhereInput = {
+    AND?: PickupPointScalarWhereInput | PickupPointScalarWhereInput[]
+    OR?: PickupPointScalarWhereInput[]
+    NOT?: PickupPointScalarWhereInput | PickupPointScalarWhereInput[]
+    id?: StringFilter<"PickupPoint"> | string
+    geolocation?: StringFilter<"PickupPoint"> | string
+    createdAt?: DateTimeFilter<"PickupPoint"> | Date | string
+    owner_id?: StringFilter<"PickupPoint"> | string
   }
 
-  export type Pickup_PointCreateManyUserInput = {
+  export type PickupPointCreateManyUserInput = {
     id: string
     geolocation: string
     createdAt: Date | string
   }
 
-  export type Pickup_PointUpdateWithoutUserInput = {
+  export type PickupPointUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     geolocation?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Pickup_PointUncheckedUpdateWithoutUserInput = {
+  export type PickupPointUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     geolocation?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Pickup_PointUncheckedUpdateManyWithoutUserInput = {
+  export type PickupPointUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     geolocation?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3677,9 +3677,9 @@ export namespace Prisma {
      */
     export type UserCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = UserCountOutputTypeDefaultArgs<ExtArgs>
     /**
-     * @deprecated Use Pickup_PointDefaultArgs instead
+     * @deprecated Use PickupPointDefaultArgs instead
      */
-    export type Pickup_PointArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = Pickup_PointDefaultArgs<ExtArgs>
+    export type PickupPointArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = PickupPointDefaultArgs<ExtArgs>
     /**
      * @deprecated Use UserDefaultArgs instead
      */

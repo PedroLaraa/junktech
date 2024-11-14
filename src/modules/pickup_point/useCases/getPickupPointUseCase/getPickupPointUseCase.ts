@@ -1,5 +1,8 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { pickupPointRepository } from "../../repositories/PickupPointRepository";
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
 
 @Injectable()
 export class GetPickupPointUseCase {
