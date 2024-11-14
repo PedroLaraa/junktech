@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const createUserUseCase_1 = require("../../../../modules/user/useCases/createUserUseCase/createUserUseCase");
 const createUserBody_1 = require("./dtos/createUserBody");
 const userViewModule_1 = require("./userViewModule/userViewModule");
+const isPublic_1 = require("../auth/decorators/isPublic");
 let UserController = class UserController {
     constructor(createUserUseCase) {
         this.createUserUseCase = createUserUseCase;
@@ -37,6 +38,7 @@ let UserController = class UserController {
 exports.UserController = UserController;
 __decorate([
     (0, common_1.Post)(),
+    (0, isPublic_1.Public)(),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [createUserBody_1.CreateUserBody]),
