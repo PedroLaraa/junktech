@@ -7,13 +7,13 @@ import { ValidateUserUseCase } from '../useCases/validateUserUseCase';
 export class LocalStrategy extends PassportStrategy(Strategy) {
   constructor( private validateUserUseCase: ValidateUserUseCase) {
     super({
-      usernameField: 'username'
+      usernameField: 'email',
     });
   }
 
-  async validate(username: string, password: string): Promise<any> {
+  async validate(email: string, password: string): Promise<any> {
     return await this.validateUserUseCase.execute({
-      username,
+      email,
       password
     })
   }

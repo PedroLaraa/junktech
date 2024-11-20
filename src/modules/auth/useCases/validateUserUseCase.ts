@@ -3,27 +3,24 @@ import { userRepository } from "../../user/repositories/UserRepository";
 import { compare } from  "bcrypt";
 
 interface ValidateUserRequest {
-  username: string
+  email: string
   password: string
 }
 
 @Injectable()
 export class ValidateUserUseCase {
+  constructor(private userRepository: userRepository) {}
 
-  constructor(private userRepository: userRepository){}
+  async execute({ email, password }: ValidateUserRequest) {
+    const user = await this.userRepository.findByEmail(email);
 
-  async execute({ username, password }: ValidateUserRequest){
+    if (!user) throw new UnauthorizedException('Email ou senha incorretos');
 
-    const user = await this.userRepository.findByUsername(username);
+    const isPasswordMatched = await compare(password, user.password);
 
-    if(!user) 
-      throw new UnauthorizedException("Email ou senha incorretos.");
-
-    const isPasswordMatched = await compare(password,  user.password);
-
-    if (!isPasswordMatched) 
-      throw new UnauthorizedException("Email ou senha incorretos.");
+    if (!isPasswordMatched)
+      throw new UnauthorizedException('Email ou senha incorretos');
 
     return user;
-  };
-};
+  }
+}

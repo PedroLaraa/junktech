@@ -28,7 +28,7 @@ describe("Validate User", () => {
     userRepositoryInMemory.users = [user];
 
     const result = await validateUserUseCase.execute({
-      username: user.username,
+      email: user.email,
       password: userPasswordWithoutEncryption
     });
 

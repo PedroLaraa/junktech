@@ -23,10 +23,10 @@ let PrismaUserRepository = class PrismaUserRepository {
             data: userRaw
         });
     }
-    async findByUsername(username) {
+    async findByEmail(email) {
         const user = await this.prisma.user.findUnique({
             where: {
-                username
+                email
             }
         });
         if (!user)

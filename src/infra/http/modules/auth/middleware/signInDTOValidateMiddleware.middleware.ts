@@ -12,8 +12,8 @@ export class signInDTOValidateMiddleware implements NestMiddleware {
 
     const signInBody = new SignInBody
 
+    signInBody.email = body.email
     signInBody.password = body.password
-    signInBody.username = body.username
 
     const validations = await validate(signInBody)
 

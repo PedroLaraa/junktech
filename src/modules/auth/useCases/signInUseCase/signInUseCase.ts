@@ -9,11 +9,9 @@ interface SignInRequest {
 
 @Injectable()
 export class SignInUseCase {
+  constructor(private jwtService: JwtService) {}
 
-  constructor(private jwtService: JwtService){};
-
-  async execute({user}: SignInRequest){
-
+  async execute({ user }: SignInRequest) {
     const payload: UserPayload = {
       sub: user.id,
       email: user.email,
@@ -24,5 +22,5 @@ export class SignInUseCase {
     const jwtToken = this.jwtService.sign(payload);
 
     return jwtToken;
-  };
-};
+  }
+}
