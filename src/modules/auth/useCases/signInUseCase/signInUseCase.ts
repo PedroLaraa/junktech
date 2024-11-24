@@ -16,6 +16,9 @@ export class SignInUseCase {
       sub: user.id,
       email: user.email,
       username: user.username,
+      name: user.name,
+      phone: user.phone,
+      cnpj_cpf: user.cnpj_cpf,
       user_type: user.user_type
     };
 

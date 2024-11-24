@@ -10,6 +10,9 @@ interface CreateUserRequest {
   email: string,
   password: string,
   username: string,
+  name: string,
+  phone: string,
+  cnpj_cpf: string,
   user_type: number
 }
 
@@ -17,11 +20,14 @@ interface CreateUserRequest {
 export class CreateUserUseCase {
   constructor(private userRepository: userRepository) {}
 
-  async execute({ email, password, username, user_type }) {
+  async execute({ email, password, username, user_type, name, phone, cnpj_cpf }) {
     const user = new User ({
       email,
       password: await hash(password, 10),
       username,
+      name,
+      phone,
+      cnpj_cpf,
       user_type
     })
 

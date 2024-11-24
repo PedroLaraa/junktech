@@ -24,12 +24,15 @@ let UserController = class UserController {
     }
     ;
     async createUser(body) {
-        const { email, password, username, user_type } = body;
+        const { email, password, username, user_type, name, cnpj_cpf, phone } = body;
         const user = await this.createUserUseCase.execute({
             email,
             password,
             username,
-            user_type
+            user_type,
+            name,
+            phone,
+            cnpj_cpf
         });
         return userViewModule_1.UserViewModule.toHttp(user);
     }

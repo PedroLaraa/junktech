@@ -8,6 +8,9 @@ export declare class UserController {
         username: string;
         email: string;
         user_type: number;
+        phone: string;
+        name: string;
+        cnpj_cpf: string;
         createdAt: Date;
     }>;
 }

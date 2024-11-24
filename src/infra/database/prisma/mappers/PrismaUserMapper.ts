@@ -3,13 +3,16 @@ import { User as UserRaw } from "prisma/generated/client";
 
 export class PrismaUserMapper {
 
-  static toPrisma({ id, username, email, password, user_type, createdAt }: User): UserRaw {
+  static toPrisma({ id, username, email, password, user_type, name, phone, cnpj_cpf, createdAt }: User): UserRaw {
     return {
       id,
       username, 
       email, 
       password, 
-      user_type, 
+      user_type,
+      name,
+      phone,
+      cnpj_cpf,
       createdAt
     }
   }

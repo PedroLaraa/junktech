@@ -5,6 +5,9 @@ interface UserSchema {
   email: string
   password: string
   username: string
+  name: string
+  cnpj_cpf: string
+  phone: string
   user_type: number
   createdAt: Date
   pickup_points?: PickupPoint[]
@@ -48,6 +51,30 @@ export class User {
 
   set username( username: string){
     this.props.username = username
+  }
+
+  get name(): string {
+    return this.props.name
+  }
+
+  set name( name: string){
+    this.props.name = name
+  }
+
+  get phone(): string {
+    return this.props.phone
+  }
+
+  set phone( phone: string){
+    this.props.phone = phone
+  }
+
+  get cnpj_cpf(): string {
+    return this.props.cnpj_cpf
+  }
+
+  set cnpj_cpf( cnpj_cpf: string){
+    this.props.cnpj_cpf = cnpj_cpf
   }
 
   get user_type(): number {

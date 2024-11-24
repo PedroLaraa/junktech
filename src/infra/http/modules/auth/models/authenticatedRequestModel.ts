@@ -6,5 +6,8 @@ export class AuthenticatedRequestModel extends Request {
     username: string;
     email: string;
     user_type: number;
+    name: string;
+    phone: string;
+    cnpj_cpf: string;
   }
 }
